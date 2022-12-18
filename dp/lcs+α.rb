@@ -1,3 +1,5 @@
+# LCS(Longest Common Subsequence): 最長共通部分列
+
 s = "ABCDCE"
 t = "ACCDEX"
 # s = gets.chomp.chars    #配列の方が文字列よりも圧倒的に速い
