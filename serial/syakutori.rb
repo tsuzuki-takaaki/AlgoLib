@@ -15,8 +15,12 @@ n.times do |i|
     sum += a[r]
     r += 1 # 条件を満たした時rをrightとする半開区間にかわる ex.. [0, 0) => [0, 1) これはsum + a[r] <= xを満たした時だからa[0]しか含まれない
   end
-  cnt += r-i if sum <= x
-  sum -= a[i]
+  cnt += r-i
+  if r == i
+    r += 1
+  else
+    sum -= a[i]
+  end
 end
 puts cnt
 

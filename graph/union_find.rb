@@ -11,7 +11,7 @@ class UnionFind
         @nodes = (0..n).to_a.map { |i| Node.new(i) }
     end
     
-    # どの素集合に属するか
+    # どの素集合に属するか(再帰的に調べる(根まで))
     def find(x)
         return x if @nodes[x].parent == x
         return @nodes[x].parent = find(@nodes[x].parent)
